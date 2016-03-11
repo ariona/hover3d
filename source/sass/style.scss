@@ -1,0 +1,205 @@
+*{
+	box-sizing: border-box;
+
+	&:before, &:after{
+		box-sizing: border-box;
+	}
+}
+
+body{
+	font-family: "Noto Sans", sans-serif;
+	line-height: 1.8;
+	color: #666;
+	// background-color: #333;
+}
+
+h1,h2,h3,h4,h5,h6{
+	font-family: Hind, sans-serif;
+	color: #333;
+	margin: 2em 0 1em;
+}
+
+a{
+	text-decoration: none;
+	color: lighten(blue,30%);
+}
+
+.site-content{
+	width: 990px;
+	max-width: 100%;
+	margin: 0 auto;
+}
+
+.section-title{
+	text-align: center;
+	text-transform: uppercase;
+}
+
+// Demo 1 : Project Hover Effect
+.project{
+	width   : 100%;
+	width: 45%;
+	float: left;
+	margin-right: 5%;
+
+	&-list{
+		&:after{
+			content :" ";
+			display : block;
+			clear   : both;
+		}
+	}
+
+	&__image{
+		display  : block;
+		position : relative;
+
+		img{
+			width: 100%;
+			max-width: 100%;
+			display: block;
+		}
+
+		&:after{
+			content    : " ";
+			width      : 100%;
+			height     : 100%;
+			position   : absolute;
+			left       : 0;
+			top        : 0;
+			background : linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.4));
+			transition : opacity .3s ease;
+			opacity    : 0;
+		}
+	}
+
+	&__card{
+		position    : relative;
+		will-change : transform;
+		transition  : box-shadow .3s ease;
+		box-shadow: 0 10px 30px rgba(0,0,0,0);
+
+		&.hover-in{
+			transition: transform .2s ease-out;
+		}
+
+		&.hover-out{
+			transition : transform .2s ease-in;
+		}
+
+	}
+
+	&:hover{
+
+		.project{
+
+			&__card{box-shadow: 0 10px 30px rgba(0,0,0,.4);}
+			&__image:after{ opacity: 1; }
+			&__detail{ 
+				border-width : 10px;
+				box-shadow   : 0 10px 30px rgba(0,0,0,.4);
+			}
+
+			&__title, &__category{
+				transform: translateY(0) scale(1);
+				opacity: 1;
+			}
+
+		}
+	}
+
+	&__detail{
+		position        : absolute;
+		left            : 30px;
+		right           : 30px;
+		top             : 30px;
+		bottom          : 30px;
+		display         : flex;
+		flex-direction  : column;
+		justify-content : center;
+		text-align      : center;
+		pointer-events  : none;
+		transform       : translateZ(30px);
+		border          : 0 solid #00BCD4;
+		transition      : border .4s ease;
+	}
+
+	&__title{
+		margin      : 0 0 10px;
+		font-size   : 36px;
+		font-weight : 700;
+		transition  : .4s ease;
+		opacity     : 0;
+		transform   : translateY(40px) scale(0);
+		will-change : transform;
+
+		a{
+			color: white;
+		}
+	}
+
+	&__category{
+		opacity          : 0;
+		transition       : .4s ease;
+		transition-delay : .1s;
+		transform        : translateY(40px) scale(0);
+		will-change      : transform;
+		a{
+			color     : rgba(white,.8);
+			font-size : 1.3em;
+		}
+	}
+
+}
+
+// Demo 2 : AppleTV Icon Effect
+.movie{
+	float: left;
+
+	&-list{
+		&:after{
+			content :" ";
+			display : block;
+			clear   : both;
+		}
+	}
+
+	&__card{
+		position: relative;
+		width: 250px;
+		height: 370px;
+
+		&.hover-in{
+			transition: .3s ease-out;
+		}
+		&.hover-out{
+			transition: .3s ease-in;
+		}
+	}
+
+	[class*="layer"]{
+		position: absolute;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		border-radius: 10px;
+	}
+	.layer-1{
+		background-image: url(images/deadpool-bg.png);
+		background-size: cover;
+	}
+	.layer-2{
+		background-image: url(images/deadpool.png);
+		background-size: cover;
+		transform: translateZ(30px);
+	}
+	.layer-3{
+		background-image: url(images/deadpool-title.png);
+		background-size: cover;
+		transform: translateZ(50px);
+	}
+	.shine{
+		border-radius: 10px
+	}
+}

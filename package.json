@@ -1,0 +1,35 @@
+{
+  "name": "hover3d",
+  "version": "1.0.0",
+  "description": "jQuery Plugin for create 3d Hover Effect by utilizing CSS3 transform property",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/ariona/hover3d.git"
+  },
+  "keywords": [
+    "jQuery",
+    "3d",
+    "Hover",
+    "Effect"
+  ],
+  "author": "Rian Ariona",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ariona/hover3d/issues"
+  },
+  "homepage": "https://github.com/ariona/hover3d#readme",
+  "dependencies": {
+    "browser-sync": "^2.11.1",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-jshint": "^2.0.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.2.0",
+    "gulp-uglify": "^1.5.3",
+    "jshint": "^2.9.1"
+  }
+}
