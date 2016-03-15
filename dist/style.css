@@ -20,17 +20,52 @@ a {
 .site-content {
   width: 990px;
   max-width: 100%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  padding: 100px 0; }
+  .site-content:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 .section-title {
   text-align: center;
   text-transform: uppercase; }
 
+.align-center {
+  text-align: center; }
+  .align-center h1 {
+    margin-top: 0; }
+
+.share {
+  margin-bottom: 50px; }
+  .share span, .share a, .share iframe {
+    vertical-align: middle; }
+    .share span span, .share a span, .share iframe span {
+      vertical-align: middle !important;
+      width: 130px !important; }
+
+.columns:after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+.columns .column {
+  width: 50%;
+  float: left; }
+
+.columns h2 {
+  margin-bottom: 20px;
+  line-height: 1; }
+
+.columns p {
+  text-align: center;
+  margin-bottom: 50px; }
+
 .project {
-  width: 100%;
-  width: 45%;
-  float: left;
-  margin-right: 5%; }
+  width: 90%;
+  float: left; }
+  .project:not(:last-child) {
+    margin-right: 4%; }
   .project-list:after {
     content: " ";
     display: block;
@@ -41,6 +76,7 @@ a {
     .project__image img {
       width: 100%;
       max-width: 100%;
+      height: auto;
       display: block; }
     .project__image:after {
       content: " ";
@@ -123,7 +159,8 @@ a {
       font-size: 1.3em; }
 
 .movie {
-  float: left; }
+  margin: 0 auto;
+  width: 250px; }
   .movie-list:after {
     content: " ";
     display: block;

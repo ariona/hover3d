@@ -18,9 +18,10 @@ Issues: http://github.com/ariona/hover3d/issues
 			perspective   : 1000,
 			sensitivity   : 20,
 			invert        : false,
-			shine	      : false,
+			shine         : false,
 			hoverInClass  : "hover-in",
-			hoverOutClass : "hover-out"
+			hoverOutClass : "hover-out",
+			hoverClass    : "hover-3d"
 		}, options);
 		
 		return this.each(function(){
@@ -34,7 +35,7 @@ Issues: http://github.com/ariona/hover3d/issues
 			var $shine = $(this).find(".shine");
 
 			// Set perspective and transformStyle value
-			// for element and 3d object	
+			// for element and 3d object
 			$this.css({
 				perspective: settings.perspective+"px",
 				transformStyle: "preserve-3d"
@@ -58,7 +59,7 @@ Issues: http://github.com/ariona/hover3d/issues
 			// Class so when mouse over it will add transition
 			// based on hover-in class
 			function enter(){
-				$card.addClass(settings.hoverInClass);
+				$card.addClass(settings.hoverInClass+" "+settings.hoverClass);
 				
 				setTimeout(function(){
 					$card.removeClass(settings.hoverInClass);
@@ -94,14 +95,14 @@ Issues: http://github.com/ariona/hover3d/issues
 			// property to 0, and add transition class
 			// for exit animation
 			function leave(){
-				$card.addClass(settings.hoverOutClass);
+				$card.addClass(settings.hoverOutClass+" "+settings.hoverClass);
 				$card.css({
 					perspective    : settings.perspective+"px",
 					transformStyle : "preserve-3d",
 					transform      : "rotateX(0) rotateY(0)"
 				});
 				setTimeout( function(){
-					$card.removeClass(settings.hoverOutClass);
+					$card.removeClass(settings.hoverOutClass+" "+settings.hoverClass);
 				}, 1000 );
 			}
 			

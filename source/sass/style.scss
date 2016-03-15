@@ -28,6 +28,13 @@ a{
 	width: 990px;
 	max-width: 100%;
 	margin: 0 auto;
+	padding: 100px 0;
+
+	&:after{
+		content :" ";
+		display : block;
+		clear   : both;
+	}
 }
 
 .section-title{
@@ -35,12 +42,53 @@ a{
 	text-transform: uppercase;
 }
 
+.align-center{
+	text-align: center;
+	h1{
+		margin-top: 0;
+	}
+}
+
+.share{
+	margin-bottom: 50px;
+	span, a, iframe{
+		vertical-align: middle;
+
+		span{
+			vertical-align: middle!important;
+			width: 130px!important;
+		}
+	}
+}
+.columns{
+	&:after{
+		content :" ";
+		display : block;
+		clear   : both;
+	}
+
+	.column{
+		width: 50%;
+		float: left;
+	}
+	h2{
+		margin-bottom: 20px;
+		line-height: 1;
+	}
+	p{
+		text-align: center;
+		margin-bottom: 50px;
+	}
+}
+
 // Demo 1 : Project Hover Effect
 .project{
-	width   : 100%;
-	width: 45%;
+	width   : 90%;
 	float: left;
-	margin-right: 5%;
+
+	&:not(:last-child){
+		margin-right: 4%;
+	}
 
 	&-list{
 		&:after{
@@ -57,6 +105,7 @@ a{
 		img{
 			width: 100%;
 			max-width: 100%;
+			height: auto;
 			display: block;
 		}
 
@@ -154,7 +203,8 @@ a{
 
 // Demo 2 : AppleTV Icon Effect
 .movie{
-	float: left;
+	margin: 0 auto;
+	width: 250px;
 
 	&-list{
 		&:after{

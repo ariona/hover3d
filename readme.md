@@ -1,6 +1,6 @@
 <img src="https://raw.githubusercontent.com/ariona/hover3d/master/hover3d.png" width=150 height=121 align="right" alt="">
 #jQuery Hover3d
-jQuery Hover3d is a simple hover script for creating 3d hover effect. It was my experiment on exploring CSS3 3d transform back in 2015 on Codepen [3D hover plane effect](http://localhost:3002/3D%20hover%20plane%20effect).
+jQuery Hover3d is a simple hover script for creating 3d hover effect. It was my experiment on exploring CSS3 3d transform back in 2015 on Codepen [3D hover plane effect](http://codepen.io/ariona/pen/JopOOr).
 
 The idea is transforming the element into 3d space using CSS3 transform, playing with translateZ for spacing the elements, and detecting mouse movement to change the transform value
 
@@ -54,6 +54,7 @@ selector | string | null | Selector for element that will be the 3d card
 perspective | integer | 1000 | Perspective value for 3d space
 sensitivity | integer | 20 | Mouse movement sensitivity, larger number is less sensitive
 invert | boolean | false | Default behavior is the element will follow the mouse, look like it facing the mouse
+shine | boolean | false | Add shining layer
 hoverInClass | string | hover-in | Helper class when mouse hover in the element, will be removed after 300ms
 hoverOutClass | string | hover-out | Helper class when mouse hover Out the element, will be removed after 300ms
 hoverClass | string | hover-3d | Helper class when the mouse is hovering the element
