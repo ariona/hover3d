@@ -1,4 +1,5 @@
-<img src="https://raw.githubusercontent.com/ariona/hover3d/master/hover3d.png" width=200 height=121 align="right" alt="">
+<img src="https://raw.githubusercontent.com/ariona/hover3d/master/hover3d.png" width=150 height=121 align="right" alt="">
+#jQuery Hover3d
 jQuery Hover3d is a simple hover script for creating 3d hover effect. It was my experiment on exploring CSS3 3d transform back in 2015 on Codepen [3D hover plane effect](http://localhost:3002/3D%20hover%20plane%20effect).
 
 The idea is transforming the element into 3d space using CSS3 transform, playing with translateZ for spacing the elements, and detecting mouse movement to change the transform value
