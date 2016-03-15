@@ -4,7 +4,10 @@
     "description": "Simple jQuery plugin for creating 3d hover effect using CSS3 3d transform",
     "keywords": [
         "hover",
-        "effect"
+        "effect",
+        "ui",
+        "image",
+        "animation"
     ],
     "version": "1.0.0",
     "author": {
