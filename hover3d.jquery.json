@@ -1,0 +1,31 @@
+{
+    "name": "hover3d",
+    "title": "jQuery Hover3d",
+    "description": "Simple jQuery plugin for creating 3d hover effect using CSS3 3d transform",
+    "keywords": [
+        "hover",
+        "effect"
+    ],
+    "version": "1.0.0",
+    "author": {
+        "name": "Rian Ariona",
+        "url": "http://ariona.net"
+    },
+    "maintainers": [{
+        "name": "Rian Ariona",
+        "email": "rian@ariona.net",
+        "url": "http://ariona.net"
+    }],
+    "licenses": [{
+        "type": "MIT",
+        "url": "https://github.com/ariona/hover3d/blob/master/LICENSE"
+    }],
+    "demo": "http://ariona.github.io/hover3d/",
+    "bugs": "https://github.com/ariona/hover3d/issues",
+    "homepage": "https://github.com/ariona/hover3d/",
+    "docs": "https://github.com/ariona/hover3d/",
+    "download": "https://github.com/ariona/hover3d/archive/master.zip",
+    "dependencies": {
+        "jquery": ">=1.7"
+    }
+}
