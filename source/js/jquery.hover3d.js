@@ -19,6 +19,7 @@ Issues: http://github.com/ariona/hover3d/issues
 			sensitivity   : 20,
 			invert        : false,
 			shine         : false,
+			persist       : false, // should the element remain in its altered rotation?
 			hoverInClass  : "hover-in",
 			hoverOutClass : "hover-out",
 			hoverClass    : "hover-3d"
@@ -96,11 +97,15 @@ Issues: http://github.com/ariona/hover3d/issues
 			// for exit animation
 			function leave(){
 				$card.addClass(settings.hoverOutClass+" "+settings.hoverClass);
-				$card.css({
-					perspective    : settings.perspective+"px",
-					transformStyle : "preserve-3d",
-					transform      : "rotateX(0) rotateY(0)"
-				});
+				
+				if (!settings.persist){
+					$card.css({
+						perspective    : settings.perspective+"px",
+						transformStyle : "preserve-3d",
+						transform      : "rotateX(0) rotateY(0)"
+					});
+				}
+				
 				setTimeout( function(){
 					$card.removeClass(settings.hoverOutClass+" "+settings.hoverClass);
 				}, 1000 );
