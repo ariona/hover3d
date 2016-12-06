@@ -71,7 +71,7 @@ Issues: http://github.com/ariona/hover3d/issues
 				var w      = $this.innerWidth(),
 					h      = $this.innerHeight(),
 					ax 	   = settings.invert ?  ( w / 2 - event.offsetX)/settings.sensitivity : -( w / 2 - event.offsetX)/settings.sensitivity,
-					ay     = settings.invert ? -( h / 2 - event.offsetY)/settings.sensitivity :  ( h / 2 - event.offsetY)/settings.sensitivity;
+					ay     = settings.invert ? -( h / 2 - event.offsetY)/settings.sensitivity :  ( h / 2 - event.offsetY)/settings.sensitivity,
 					dy     = event.offsetY - h / 2,
 					dx     = event.offsetX - w / 2,
 					theta  = Math.atan2(dy, dx),
