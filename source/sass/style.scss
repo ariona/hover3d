@@ -251,16 +251,16 @@ pre{
 		border-radius: 10px;
 	}
 	.layer-1{
-		background-image: url(images/deadpool-bg.png);
+		background-image: url(dist/images/deadpool-bg.png);
 		background-size: cover;
 	}
 	.layer-2{
-		background-image: url(images/deadpool.png);
+		background-image: url(dist/images/deadpool.png);
 		background-size: cover;
 		transform: translateZ(30px);
 	}
 	.layer-3{
-		background-image: url(images/deadpool-title.png);
+		background-image: url(dist/images/deadpool-title.png);
 		background-size: cover;
 		transform: translateZ(50px);
 	}

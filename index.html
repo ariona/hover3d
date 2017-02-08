@@ -3,22 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>jQuery Hover3d</title>
-	<link rel="stylesheet" href="dist/style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<div id="fb-root"></div>
+	<a href="https://github.com/ariona/hover3d"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://camo.githubusercontent.com/38ef81f8aca64bb9a64448d0d70f1308ef5341ab/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6461726b626c75655f3132313632312e706e67" alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png"></a>
 
 	<div class="site-content">
 		<div class="align-center">
-			<img src="hover3d.png" width=150 height=121 alt="">
+			<img src="dist/images/hover3d.png" width=150 height=121 alt="">
 			<h1>jQuery Hover3d</h1>
 			<div class="share">
-				<span class="fb-like" data-href="http://ariona.github.io/hover3d/" data-width="50" data-layout="standard" data-action="like" data-show-faces="false"></span>
-				<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=jQuery Hover3d for creating 3d Hover effect">Tweet</a>
 				<!-- Place this tag where you want the button to render. -->
 				<a class="github-button" href="https://github.com/ariona/hover3d" data-icon="octicon-star" data-count-href="/ariona/hover3d/stargazers" data-count-api="/repos/ariona/hover3d#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star ariona/hover3d on GitHub">Star</a>
 				<!-- Place this tag where you want the button to render. -->
 				<a class="github-button" href="https://github.com/ariona/hover3d/fork" data-icon="octicon-repo-forked" data-count-href="/ariona/hover3d/network" data-count-api="/repos/ariona/hover3d#forks_count" data-count-aria-label="# forks on GitHub" aria-label="Fork ariona/hover3d on GitHub">Fork</a>
+				<a class="twitter-share-button" href="https://twitter.com/intent/tweet?text=jQuery Hover3d for creating 3d Hover effect">Tweet</a>
 			</div>
 		</div>
 
@@ -27,54 +26,84 @@
 		<p>The idea is transforming the element into 3d space using CSS3 transform, playing with translateZ for spacing the elements, and detecting mouse movement to change the transform value</p>
 
 
-		<div class="columns">
-			<div class="column">
-				<h2 class="section-title">Demo 1</h2>
+		<div class="demo demo-1">
+			<h2 class="section-title">Demo #1 Awesome tilt effect</h2>
 
-				<p>Simple hover effect for your project</p>
-				<div class="project-list">
-					<div class="project">
-						<div class="project__card">
-							<a href="" class="project__image"><img src="http://unsplash.it/600/400?image=189" width=600 height=400 alt=""></a>
-							<div class="project__detail">
-								<h2 class="project__title"><a href="#">Project Name</a></h2>
-								<small class="project__category"><a href="#">Photography</a></small>
-							</div>
+			<p>Simple hover effect for your project</p>
+			<div class="project-list">
+				<div class="project">
+					<div class="project__card">
+						<a href="" class="project__image"><img src="http://unsplash.it/600/400?image=189" width=600 height=400 alt=""></a>
+						<div class="project__detail">
+							<h2 class="project__title"><a href="#">Project Name</a></h2>
+							<small class="project__category"><a href="#">Photography</a></small>
 						</div>
 					</div>
 				</div>
-				
-			</div>
-			<div class="column">
-				<h2 class="section-title">Demo 2</h2>
-				<p>Creating AppleTV like icon</p>
-				<div class="movie">
-					<div class="movie__card">
-						<div class="layer-1"></div>
-						<div class="layer-2"></div>
-						<div class="layer-3"></div>
+
+				<div class="project">
+					<div class="project__card">
+						<a href="" class="project__image"><img src="http://unsplash.it/600/400?image=129" width=600 height=400 alt=""></a>
+						<div class="project__detail">
+							<h2 class="project__title"><a href="#">Project Name</a></h2>
+							<small class="project__category"><a href="#">Photography</a></small>
+						</div>
 					</div>
 				</div>
-				
+
+				<div class="project">
+					<div class="project__card">
+						<a href="" class="project__image"><img src="http://unsplash.it/600/400?image=119" width=600 height=400 alt=""></a>
+						<div class="project__detail">
+							<h2 class="project__title"><a href="#">Project Name</a></h2>
+							<small class="project__category"><a href="#">Photography</a></small>
+						</div>
+					</div>
+				</div>
+
+				<div class="project">
+					<div class="project__card">
+						<a href="" class="project__image"><img src="http://unsplash.it/600/400?image=89" width=600 height=400 alt=""></a>
+						<div class="project__detail">
+							<h2 class="project__title"><a href="#">Project Name</a></h2>
+							<small class="project__category"><a href="#">Photography</a></small>
+						</div>
+					</div>
+				</div>
 			</div>
+
 		</div>
+		<div class="demo demo-2">
+			<div class="columns">
+				<div class="column">
+					<h2 class="section-title">Demo #2: AppleTv Icon</h2>
+					<p>By enabling shine option, you can create appleTV icon like effect. Be creating multiple layer for creating depth effect</p>
 
-		
+					<pre>
+$(".movie").hover3d({
+	selector: ".movie__card",
+	shine: true,
+	sensitivity: 20,
+});</pre>
+				</div>
+				<div class="column">
+					<div class="movie">
+						<div class="movie__card">
+							<div class="layer-1"></div>
+							<div class="layer-2"></div>
+							<div class="layer-3"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 
-
+		</div>
 	</div>
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-	<script>window.jQuery || document.write('<script src="dist/js/vendor/jquery-1.12.1.min.js"><\\/script>')</script>
+	<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.1.min.js"><\\/script>')</script>
 	<!-- Place this tag right after the last button or just before your close body tag. -->
 	<script async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5&appId=158793794211775";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
 	<script>window.twttr = (function(d, s, id) {
 	  var js, fjs = d.getElementsByTagName(s)[0],
 	    t = window.twttr || {};
@@ -96,8 +125,7 @@
 	<script>
 		$(document).ready(function(){
 			$(".project").hover3d({
-				selector: ".project__card",
-				shine: false,
+				selector: ".project__card"
 			});
 
 			$(".movie").hover3d({

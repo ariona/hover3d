@@ -194,15 +194,15 @@ pre {
     bottom: 0;
     border-radius: 10px; }
   .movie .layer-1 {
-    background-image: url(images/deadpool-bg.png);
+    background-image: url(dist/images/deadpool-bg.png);
     background-size: cover; }
   .movie .layer-2 {
-    background-image: url(images/deadpool.png);
+    background-image: url(dist/images/deadpool.png);
     background-size: cover;
     -webkit-transform: translateZ(30px);
             transform: translateZ(30px); }
   .movie .layer-3 {
-    background-image: url(images/deadpool-title.png);
+    background-image: url(dist/images/deadpool-title.png);
     background-size: cover;
     -webkit-transform: translateZ(50px);
             transform: translateZ(50px); }

@@ -68,7 +68,7 @@ gulp.task( 'css', function(){
 			   .pipe( sass().on('error',sass.logError))
 			   .on('error', function(){ this.emit( 'end' ) })
 			   .pipe( autoprefixer({browsers: "last 4 version"}) )
-			   .pipe( gulp.dest("dist/") )
+			   .pipe( gulp.dest(".") )
 			   .pipe( browserSync.stream() );
 
 });
@@ -105,10 +105,10 @@ gulp.task( 'js', function(){
  * with support of browsersync
  **/
 gulp.task( 'default', function(){
-	files = ["dist/**/*.html","dist/**/*.js"];
+	files = ["./**/*.html","./**/*.js"];
 	browserSync.init(files,{
 		server:{
-			baseDir: "dist/",
+			baseDir: ".",
 		}
 	});
 	gulp.watch( "./source/sass/**/*.scss", ["css"] );
