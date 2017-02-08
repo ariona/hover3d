@@ -4,7 +4,7 @@
     box-sizing: border-box; }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: karla, sans-serif;
   line-height: 1.8;
   color: #666; }
 
@@ -44,6 +44,20 @@ a {
       vertical-align: middle !important;
       width: 130px !important; }
 
+.demo {
+  margin: 100px 0; }
+  .demo h2 {
+    margin-bottom: 10px;
+    line-height: 1; }
+
+.demo-1 {
+  text-align: center; }
+
+.demo-2 {
+  text-align: left; }
+  .demo-2 .section-title {
+    text-align: left; }
+
 .columns:after {
   content: " ";
   display: block;
@@ -51,21 +65,21 @@ a {
 
 .columns .column {
   width: 50%;
-  float: left; }
+  float: left;
+  min-height: 1px; }
 
 .columns h2 {
   margin-bottom: 20px;
   line-height: 1; }
 
-.columns p {
-  text-align: center;
-  margin-bottom: 50px; }
+pre {
+  background-color: #fbfbfb;
+  padding: 10px; }
 
 .project {
-  width: 90%;
-  float: left; }
-  .project:not(:last-child) {
-    margin-right: 4%; }
+  width: 50%;
+  float: left;
+  padding: 15px; }
   .project-list:after {
     content: " ";
     display: block;
@@ -90,7 +104,6 @@ a {
       opacity: 0; }
   .project__card {
     position: relative;
-    will-change: transform;
     transition: box-shadow .3s ease;
     box-shadow: 0 10px 30px transparent; }
     .project__card.hover-in {
@@ -113,6 +126,10 @@ a {
         -ms-transform: translateY(0) scale(1);
             transform: translateY(0) scale(1);
     opacity: 1; }
+  .project:hover .project__title {
+    font-weight: 600;
+    margin-bottom: 0;
+    line-height: 1; }
   .project__detail {
     position: absolute;
     left: 30px;
@@ -129,7 +146,6 @@ a {
         -ms-flex-pack: center;
             justify-content: center;
     text-align: center;
-    pointer-events: none;
     -webkit-transform: translateZ(30px);
             transform: translateZ(30px);
     border: 0 solid #00BCD4;
@@ -168,11 +184,8 @@ a {
   .movie__card {
     position: relative;
     width: 250px;
-    height: 370px; }
-    .movie__card.hover-in {
-      transition: .3s ease-out; }
-    .movie__card.hover-out {
-      transition: .3s ease-in; }
+    height: 370px;
+    transition: .2s ease-out; }
   .movie [class*="layer"] {
     position: absolute;
     left: 0;

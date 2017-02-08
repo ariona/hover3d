@@ -1,7 +1,7 @@
 /*
 jQuery Hover3d
 =================================================
-Version: 1.0.0
+Version: 1.1.0
 Author: Rian Ariona
 Website: http://ariona.net
 Docs: http://ariona.github.io/hover3d
@@ -28,6 +28,9 @@ Issues: http://github.com/ariona/hover3d/issues
 			
 			var $this = $(this),
 				$card = $this.find(settings.selector);
+				currentX = 0;
+				currentY = 0;
+
 
 			if( settings.shine ){
 				$card.append('<div class="shine"></div>');
@@ -52,15 +55,16 @@ Issues: http://github.com/ariona/hover3d/issues
 				left      : 0,
 				bottom    : 0,
 				right     : 0,
+				transform : 'translateZ(1px)',
 				"z-index" : 9
 			});
 			
 			// Mouse Enter function, this will add hover-in
 			// Class so when mouse over it will add transition
 			// based on hover-in class
-			function enter(){
+			function enter(event){
 				$card.addClass(settings.hoverInClass+" "+settings.hoverClass);
-				
+				currentX = currentY = 0;
 				setTimeout(function(){
 					$card.removeClass(settings.hoverInClass);
 				}, 1000);
@@ -68,14 +72,18 @@ Issues: http://github.com/ariona/hover3d/issues
 			
 			// Mouse movement Parallax effect
 			function move(event){
-				var w      = $this.innerWidth(),
-					h      = $this.innerHeight(),
-					ax 	   = settings.invert ?  ( w / 2 - event.offsetX)/settings.sensitivity : -( w / 2 - event.offsetX)/settings.sensitivity,
-					ay     = settings.invert ? -( h / 2 - event.offsetY)/settings.sensitivity :  ( h / 2 - event.offsetY)/settings.sensitivity,
-					dy     = event.offsetY - h / 2,
-					dx     = event.offsetX - w / 2,
+				
+				var w      = $card.innerWidth(),
+					h      = $card.innerHeight(),
+					currentX = Math.round(event.pageX - $card.offset().left),
+					currentY = Math.round(event.pageY - $card.offset().top),
+					ax 	   = settings.invert ?  ( w / 2 - currentX)/settings.sensitivity : -( w / 2 - currentX)/settings.sensitivity,
+					ay     = settings.invert ? -( h / 2 - currentY)/settings.sensitivity :  ( h / 2 - currentY)/settings.sensitivity,
+					dx     = currentX - w / 2,
+					dy     = currentY - h / 2,
 					theta  = Math.atan2(dy, dx),
 					angle  = theta * 180 / Math.PI - 90;
+
 					
 				if (angle < 0) {
 					angle  = angle + 360;
@@ -103,6 +111,7 @@ Issues: http://github.com/ariona/hover3d/issues
 				});
 				setTimeout( function(){
 					$card.removeClass(settings.hoverOutClass+" "+settings.hoverClass);
+					currentX = currentY = 0;
 				}, 1000 );
 			}
 			

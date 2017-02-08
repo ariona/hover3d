@@ -1,0 +1,28 @@
+{
+  "name": "hover3d",
+  "version": "1.1.0",
+  "homepage": "https://github.com/ariona/hover3d",
+  "authors": [
+    "\"Ariona",
+    "Rian <rian@ariona.net> (http://ariona.net)\""
+  ],
+  "description": "Simple jQuery Plugin for Creating 3d Tilt effect",
+  "main": "\"dist/js/jquery.hover3d.min.js\"",
+  "keywords": [
+    "jquery",
+    "hover",
+    "hover",
+    "effect",
+    "3d",
+    "hover",
+    "tilt"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

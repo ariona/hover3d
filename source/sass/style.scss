@@ -7,10 +7,9 @@
 }
 
 body{
-	font-family: "Noto Sans", sans-serif;
+	font-family: karla, sans-serif;
 	line-height: 1.8;
 	color: #666;
-	// background-color: #333;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -60,6 +59,25 @@ a{
 		}
 	}
 }
+.demo{
+	margin: 100px 0;
+
+	h2{
+		margin-bottom: 10px;
+		line-height: 1;
+	}
+
+}
+.demo-1{
+	text-align: center;
+}
+.demo-2{
+	text-align: left;
+
+	.section-title{
+		text-align: left;
+	}
+}
 .columns{
 	&:after{
 		content :" ";
@@ -70,26 +88,25 @@ a{
 	.column{
 		width: 50%;
 		float: left;
+		min-height: 1px;
 	}
 	h2{
 		margin-bottom: 20px;
 		line-height: 1;
 	}
-	p{
-		text-align: center;
-		margin-bottom: 50px;
-	}
+}
+
+pre{
+	background-color: #fbfbfb;
+	padding: 10px;
 }
 
 // Demo 1 : Project Hover Effect
 .project{
-	width   : 90%;
+	width: 50%;
 	float: left;
-
-	&:not(:last-child){
-		margin-right: 4%;
-	}
-
+	padding: 15px;
+	
 	&-list{
 		&:after{
 			content :" ";
@@ -124,7 +141,6 @@ a{
 
 	&__card{
 		position    : relative;
-		will-change : transform;
 		transition  : box-shadow .3s ease;
 		box-shadow: 0 10px 30px rgba(0,0,0,0);
 
@@ -154,6 +170,12 @@ a{
 				opacity: 1;
 			}
 
+			&__title{
+				font-weight: 600;
+				margin-bottom: 0;
+				line-height: 1
+			}
+
 		}
 	}
 
@@ -167,7 +189,6 @@ a{
 		flex-direction  : column;
 		justify-content : center;
 		text-align      : center;
-		pointer-events  : none;
 		transform       : translateZ(30px);
 		border          : 0 solid #00BCD4;
 		transition      : border .4s ease;
@@ -218,13 +239,7 @@ a{
 		position: relative;
 		width: 250px;
 		height: 370px;
-
-		&.hover-in{
-			transition: .3s ease-out;
-		}
-		&.hover-out{
-			transition: .3s ease-in;
-		}
+		transition: .2s ease-out;
 	}
 
 	[class*="layer"]{
