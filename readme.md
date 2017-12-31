@@ -10,7 +10,7 @@ The idea is transforming the element into 3d space using CSS3 transform, playing
 
 ## Demo
 
-Check out the demo here [Demo](http://ariona.github.io/hover3d/index.html)
+Check out [the demo](http://ariona.github.io/hover3d/index.html)
 
 ## Usage
 
